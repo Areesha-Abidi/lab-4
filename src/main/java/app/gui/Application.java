@@ -233,8 +233,6 @@ public class Application {
         return theCard;
     }
 
-    // TODO Task 4: modify this method so that it takes in a getTopGradeUseCase
-    //              Note: this will require you to update the code which calls this method.
     private static JPanel createManageTeamCard(JFrame jFrame, LeaveTeamUseCase leaveTeamUseCase,
                                                GetAverageGradeUseCase getAverageGradeUseCase, GetTopGradeUseCase getTopGradeUseCase) {
         final JPanel theCard = new JPanel();
@@ -242,7 +240,6 @@ public class Application {
         final JTextField courseField = new JTextField(20);
         // make a separate line.
         final JButton getAverageButton = new JButton("Get Average Grade");
-        // TODO Task 4: Add another button for "Get Top Grade" (check the getAverageButton for example)
         final JButton getTopGrade = new JButton("Get Top Grade");
 
         final JButton leaveTeamButton = new JButton("Leave Team");
@@ -261,7 +258,6 @@ public class Application {
             }
         });
 
-        // TODO Task 4: Add action listener for getTopGrade button, follow example of getAverageButton
         getTopGrade.addActionListener(event -> {
             final String course = courseField.getText();
 
